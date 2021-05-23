@@ -1,17 +1,18 @@
-require('dotenv').config({ path: 'env' });
+require('dotenv').config({ path: '.env' });
 
 exports.config = {
   tests: './tests/*_test.js',
   output: './output',
   helpers: {
     Puppeteer: {
-      url: 'http://localhost',
+      url: process.env.URL,
       show: true,
       windowSize: '1200x900'
     }
   },
   include: {
-    I: './steps_file.js'
+    I: './steps_file.js',
+    ...require('./config/pageObjects')
   },
   bootstrap: null,
   mocha: {},
