@@ -8,11 +8,14 @@ exports.config = {
       url: process.env.URL,
       show: true,
       windowSize: '1200x900'
+    },
+    FileSystem: {
+
     }
   },
   include: {
     I: './steps_file.js',
-    ...require('./config/pageObjects')
+    ...require('./config/pageObjects'),
   },
   bootstrap: null,
   mocha: {},
