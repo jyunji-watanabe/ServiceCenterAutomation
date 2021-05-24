@@ -2,8 +2,8 @@
 Automate OutSystems Service Center with CodeceptJS
 
 ## Target
-OutSystems: Personal Environment Version 11.11.0 (Build 26942)
-Browser: Chromeium using Puppeteer
+- OutSystems: Personal Environment Version 11.11.0 (Build 26942)
+- Browser: Chromeium using Puppeteer
 
 ## Retrieve Active Named Users and Application Objects count
 Command
