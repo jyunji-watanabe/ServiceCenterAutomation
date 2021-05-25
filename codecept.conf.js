@@ -30,6 +30,10 @@ exports.config = {
     },
     screenshotOnFail: {
       enabled: true
+    },
+    stepByStepReport: {
+      enabled: false,
+      deleteSuccessful: false
     }
   }
 }
