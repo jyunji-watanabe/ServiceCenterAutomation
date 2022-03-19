@@ -4,13 +4,20 @@ const { I } = inject();
 module.exports = {
     locators: {
         From: { css: 'input[id$=Filter_FromDate]' },
-        To: { css: 'input[id$=Filter_ToDate2]' }
+        To: { css: 'input[id$=Filter_ToDate2]' },
+        FilterButton: { css: 'input[id$=Button1]' },
+        ExportButton: { css: 'input[value=Export to excel]' },
     },
     open: function() {
         menu.open('Monitoring', 'Error');
     },
-    filter: function() {
-        I.fillField(this.locators.From, '2021-05-20 01:23:45');
-        I.fillField(this.locators.To, '2021-05-27 01:23:46');
+    filterByDates: function(startDateString, endDateString) {
+        I.fillField(this.locators.From, startDateString);
+        I.fillField(this.locators.To, endDateString);
+        I.click(this.locators.FilterButton);
+    },
+    downloadFile: function() {
+        // if logs in that timewindow aren't there, export button disappears
+        //I.click(this.locators.ExportButton);
     }
 }

@@ -5,6 +5,13 @@ Automate OutSystems Service Center with CodeceptJS
 - OutSystems: Personal Environment Version 11.11.0 (Build 26942)
 - Browser: Chromeium using Puppeteer
 
+## install modules
+Install needed modules.
+```
+npm install dotenv
+
+```
+
 ## .env file
 This code uses dotenv to store sensitive information.
 So, we need to create a .env file under root folder containig text like (replace text after '=' sign with proper values):
