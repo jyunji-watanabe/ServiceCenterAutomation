@@ -20,15 +20,27 @@ Command
 npx codeceptjs run tests/licensingInfo_test.js
 ```
 
-Result is outputted in output/LicensingInfo_yyyyMMdd.txt.
+Result will be outputted in output/LicensingInfo_yyyyMMdd.txt.
 Sample:
 ```
 Active Named Users: 349
 Application Objects: 872
 ```
 
+## Retrieve Front-end Server statuses from the Environment Health page in PE
+Command
+```
+npx codeceptjs run .\tests\environmenthealth_test.js --steps
+```
+
+Result will be shown on the terminal.
+In real projects we can push this information into a file or DB to check differences or alert problems.
+Sample:
+```
+2022/03/19 15:40:32,Ok,Ok,Ok,OK,OK,OK
+```
+
 ## TODO (memo)
 - Download a log excel file for the last one week
-- Retrieve Environment Health
 - Retrieve modules in the Independent Module
 - Create a list of modules filtered with matching by name
