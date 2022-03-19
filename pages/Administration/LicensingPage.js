@@ -1,7 +1,6 @@
 const menu = require('../../utilities/menu');
 
 const { I } = inject();
-require('../../utilities/menu');
 module.exports = {
     locators: {
         FeatureTitles: { css: 'tr>td:nth-child(2) span.NoWrap' }, // Title部分はNoWrapクラスがついているため（他に説明部分がある）

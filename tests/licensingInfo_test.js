@@ -1,6 +1,6 @@
 Feature('LicensingInfo');
 require('dotenv').config({ path: '.env' });
-let utility = require('../utilities/utility.js')
+let utility = require('../utilities/utility.js');
 Scenario('Retrieve Active Named Users and Application Objects count', async ({ I, licensingPage }) => {
     I.amOnPage('/');
     I.login(process.env.ACCOUNT, process.env.PASSWORD);
